@@ -18,7 +18,7 @@ function get_extra_info() {
 
 psvar=(${SSH_CLIENT})
 
-PROMPT=$'%{$fg[blue]%}╭%{%1(V.$fg_bold[yellow].$fg_bold[green])%}%m %{$fg[blue]%}%D{[%H:%M:%S]} %{$fg[gray]%}[$(wc -l ~/.zsh_history)] %{$reset_color%}$(get_extra_info)%{$fg[white]%}[%~]%{$reset_color%} %(?.%{$fg[green]%}.%{$bg[red]$fg[white]%})[%?]%{$reset_color%} $(git_prompt_info2)\
+PROMPT=$'%{$fg[blue]%}╭%{%1(V.$fg_bold[yellow].$fg_bold[green])%}%m %{$fg[blue]%}%D{[%H:%M:%S]} %{$fg[gray]%}[$(cat ~/.zsh_history | wc -l)] %{$reset_color%}$(get_extra_info)%{$fg[white]%}[%~]%{$reset_color%} %(?.%{$fg[green]%}.%{$bg[red]$fg[white]%})[%?]%{$reset_color%} $(git_prompt_info2)\
 %{$fg[blue]%}╰▶%(?.%{$fg[green]%}.%{$fg[red]%}) %#%{$reset_color%} '
 
 PS2='%_ >'
